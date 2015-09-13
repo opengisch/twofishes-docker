@@ -1,0 +1,4 @@
+*.zip
+*.jar
+build/index
+build/versions.txt
