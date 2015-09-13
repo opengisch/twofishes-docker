@@ -11,4 +11,4 @@ COPY index /twofishes/index
 COPY server-assembly.jar /twofishes/server-assembly.jar
 
 EXPOSE 8080 8081 8082 8083
-CMD java -xm2048 -jar /twofishes/server-assembly.jar --hfile_basepath /twofishes/index
+CMD java -Xmx2048m -jar /twofishes/server-assembly.jar --hfile_basepath /twofishes/index

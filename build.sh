@@ -19,8 +19,7 @@ cp $SERVER_ASSEMBLY.jar build/server-assembly.jar
 #unzip index file to build/index folder removing unneeded sublevel 
 unzip -d index $INDEX_VERSION.zip
 INDEX_EXTRACT_VERSION=("index"/*)
-mkdir build/index/
-mv -f $INDEX_EXTRACT_VERSION/ build/index/
+mv -f $INDEX_EXTRACT_VERSION build/index
 rmdir index
 
 #create text file vit used versions
@@ -33,4 +32,7 @@ echo $RUN_CMD
 #$RUN_CMD
 
 cd build
-echo "docker build -t ""twofishes:server_$SERVER_ASSEMBLY_VERSION-index_$INDEX_VERSION"" ."
+DOCKER_BUILD="docker build -t twofishes:server_$SERVER_ASSEMBLY_VERSION-index_$INDEX_VERSION ."
+echo "Running:"
+echo $DOCKER_BUILD
+$DOCKER_BUILD
