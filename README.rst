@@ -32,3 +32,4 @@ Instruction to run your build
 ------------------
 
 docker run -d twofishes:server_0.84.9-index_2015-03-05
+use -P to automatically map all the exposed ports
